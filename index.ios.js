@@ -21,14 +21,16 @@ export default class Scratch extends Component {
         selectedTab={this.state.selectedTab}>
         <TabBarIOS.Item
           selected={this.state.selectedTab === "tab1"}
-          title={`TAB 1`}>
+          title={`TAB 1`}
+          onPress={() => this.setState({selectedTab: "tab1"})}>
           <AppNavigator
           initialRoute={{ident: "PeopleIndex"}} />
         </TabBarIOS.Item>
 
         <TabBarIOS.Item
           selected={this.state.selectedTab === "tab2"}
-          title={`TAB 2`}>
+          title={`TAB 2`}
+          onPress={() => this.setState({selectedTab: "tab2"})}>
           <AppNavigator
             initialRoute={{ident: "PersonShow",
                            person: {firstName: "jordan", lastName: "leigh", roomNumber: 30}}} />

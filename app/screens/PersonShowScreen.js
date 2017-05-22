@@ -31,6 +31,7 @@ export default class PersonShowScreen extends Component {
 
         <Text style={{marginTop:20, fontSize: 20, marginLeft: 25}}>{'Tenant Information'}</Text>
         <Text style={styles.personName}>{`${_.capitalize(this.props.person.firstName)} ${_.capitalize(this.props.person.lastName)}`}</Text>
+        <Text style={styles.personName}>Room Number: {this.props.person.roomNumber}</Text>
       </ViewContainer>
     );
   }
