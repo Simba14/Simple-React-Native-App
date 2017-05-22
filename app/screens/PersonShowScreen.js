@@ -28,8 +28,8 @@ export default class PersonShowScreen extends Component {
         <TouchableOpacity onPress={() => this.props.navigator.pop() }>
           <Icon name="times" size={30}/>
         </TouchableOpacity>
-        
-        <Text style={{marginTop:100, fontSize: 20, marginLeft: 25}}>{'PERSON SHOW SCREEN'}</Text>
+
+        <Text style={{marginTop:20, fontSize: 20, marginLeft: 25}}>{'Tenant Information'}</Text>
         <Text style={styles.personName}>{`${_.capitalize(this.props.person.firstName)} ${_.capitalize(this.props.person.lastName)}`}</Text>
       </ViewContainer>
     );
@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
   },
   personName: {
     marginLeft: 25,
+    marginTop: 10
   }
 });
 

@@ -34,8 +34,9 @@ export default class PeopleIndexScreen extends Component {
     return (
       <ViewContainer>
         <StatusBarBackground style={{backgroundColor: 'mistyrose'}}/>
+        <Text style={{marginTop:20, fontSize: 20, marginLeft: 25}}>{'Tenants Index'}</Text>
         <ListView
-          style={{marginTop: 100}}
+          style={{marginTop: 10}}
           dataSource={this.state.peopleDataSource}
           renderRow={(person) => { return this._renderPersonRow(person) }} />
       </ViewContainer>
