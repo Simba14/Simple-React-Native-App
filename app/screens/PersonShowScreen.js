@@ -1,5 +1,6 @@
 'use strict'
 import React, { Component } from 'react';
+import { Navigator } from 'react-native-deprecated-custom-components'
 import {
   AppRegistry,
   StyleSheet,
@@ -23,7 +24,11 @@ export default class PersonShowScreen extends Component {
     return (
       <ViewContainer style={{backgroundColor: "dodgerblue"}}>
         <StatusBarBackground style={{backgroundColor: 'mistyrose'}}/>
-        <Icon name="times" size={30}/>
+
+        <TouchableOpacity onPress={() => this.props.navigator.pop() }>
+          <Icon name="times" size={30}/>
+        </TouchableOpacity>
+        
         <Text style={{marginTop:100, fontSize: 20, marginLeft: 25}}>{'PERSON SHOW SCREEN'}</Text>
         <Text style={styles.personName}>{`${_.capitalize(this.props.person.firstName)} ${_.capitalize(this.props.person.lastName)}`}</Text>
       </ViewContainer>
