@@ -7,6 +7,7 @@ import {
   TabBarIOS
 } from 'react-native';
 import AppNavigator from './app/navigations/AppNavigator'
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 export default class Scratch extends Component {
   constructor(props) {
@@ -19,22 +20,24 @@ export default class Scratch extends Component {
     return (
       <TabBarIOS
         selectedTab={this.state.selectedTab}>
-        <TabBarIOS.Item
+        <Icon.TabBarItemIOS
           selected={this.state.selectedTab === "tab1"}
           title={`TAB 1`}
+          iconName='user'
           onPress={() => this.setState({selectedTab: "tab1"})}>
           <AppNavigator
           initialRoute={{ident: "PeopleIndex"}} />
-        </TabBarIOS.Item>
+        </Icon.TabBarItemIOS>
 
-        <TabBarIOS.Item
+        <Icon.TabBarItemIOS
           selected={this.state.selectedTab === "tab2"}
           title={`TAB 2`}
+          iconName='user'
           onPress={() => this.setState({selectedTab: "tab2"})}>
           <AppNavigator
             initialRoute={{ident: "PersonShow",
                            person: {firstName: "jordan", lastName: "leigh", roomNumber: 30}}} />
-        </TabBarIOS.Item>
+        </Icon.TabBarItemIOS>
       </TabBarIOS>
     );
   }
