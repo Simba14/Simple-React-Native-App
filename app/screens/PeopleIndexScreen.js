@@ -43,12 +43,19 @@ export default class PeopleIndexScreen extends Component {
 
   _renderPersonRow(person) {
     return (
-      <TouchableOpacity style={styles.personRow} onPress={(event) => console.log(person)}>
+      <TouchableOpacity style={styles.personRow} onPress={(event) => this._navigateToPersonShow(person) }>
         <Text style={styles.personName}>{`${_.capitalize(person.firstName)} ${_.capitalize(person.lastName)}`}</Text>
         <View style={{flex:1}} />
         <Icon name="chevron-right" style={styles.personMoreIcon} />
       </TouchableOpacity>
     );
+  }
+
+  _navigateToPersonShow(person) {
+    this.props.navigator.push({
+      ident: "PersonShow",
+      person: person
+    });
   }
 }
 
