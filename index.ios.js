@@ -40,7 +40,8 @@ export default class Scratch extends Component {
         initialRoute={{ident: "PeopleIndex"}}
         ref="appNavigator"
         style={styles.navigatorStyles}
-        renderScene={this._renderScene} />
+        renderScene={this._renderScene} 
+        />
     );
   }
  }

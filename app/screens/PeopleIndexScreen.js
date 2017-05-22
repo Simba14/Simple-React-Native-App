@@ -1,5 +1,6 @@
 'use strict'
 import React, { Component } from 'react';
+import { Navigator } from 'react-native-deprecated-custom-components'
 import {
   AppRegistry,
   StyleSheet,
@@ -54,7 +55,7 @@ export default class PeopleIndexScreen extends Component {
   _navigateToPersonShow(person) {
     this.props.navigator.push({
       ident: "PersonShow",
-      person: person
+      person
     });
   }
 }

@@ -21,8 +21,9 @@ export default class PersonShowScreen extends Component {
 
   render() {
     return (
-      <ViewContainer>
+      <ViewContainer style={{backgroundColor: "dodgerblue"}}>
         <StatusBarBackground style={{backgroundColor: 'mistyrose'}}/>
+        <Icon name="times" size={30}/>
         <Text style={{marginTop:100, fontSize: 20, marginLeft: 25}}>{'PERSON SHOW SCREEN'}</Text>
         <Text style={styles.personName}>{`${_.capitalize(this.props.person.firstName)} ${_.capitalize(this.props.person.lastName)}`}</Text>
       </ViewContainer>
