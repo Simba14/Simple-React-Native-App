@@ -21,8 +21,21 @@ export default class PersonShowScreen extends Component {
     }
 
   render() {
+    var personBackgroundColor;
+    switch(this.props.person.roomNumber) {
+      case 30:
+        personBackgroundColor = 'dodgerblue'
+        break
+      case 14:
+        personBackgroundColor = 'skyblue'
+        break
+      case 2:
+        personBackgroundColor = 'aliceblue'
+        break
+    }
+
     return (
-      <ViewContainer style={{backgroundColor: "dodgerblue"}}>
+      <ViewContainer style={{backgroundColor: personBackgroundColor}}>
         <StatusBarBackground style={{backgroundColor: 'mistyrose'}}/>
 
         <TouchableOpacity onPress={() => this.props.navigator.pop() }>
